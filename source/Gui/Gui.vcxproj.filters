@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="GuiDefines.h">
+      <Filter>Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiPrecompiled.h">
+      <Filter>Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimaryView.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardInterface.h">
+      <Filter>Input\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInterface.h">
+      <Filter>Input\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects.h">
+      <Filter>Effects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlutCallbacks.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewEffects.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewStates.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HatchEffects.h">
+      <Filter>Effects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAOEffects.h">
+      <Filter>Effects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureEffect.h">
+      <Filter>Effects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiManager.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDome.h">
+      <Filter>Elements\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Elements\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Precompiled">
+      <UniqueIdentifier>{490930d1-95f5-4ac1-b7b1-6829055772bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{6f369a3e-6823-41de-9d78-c36c724e0398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Header Files">
+      <UniqueIdentifier>{cd578924-d99b-4ffb-985d-886442ddab75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Source Files">
+      <UniqueIdentifier>{8a1819e6-9ca5-4680-abf4-769fdcb0f9af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{778650a2-7340-4c97-9a99-0572e36191a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Header Files">
+      <UniqueIdentifier>{f30326fc-b9f6-42d4-8c8f-9d1551af36ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Source Files">
+      <UniqueIdentifier>{ec8bc6c3-64aa-4f7a-834c-8903dcb680cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{f98cfc2c-5d6a-4d23-95b4-4925b9af6cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Header Files">
+      <UniqueIdentifier>{3e088293-8b55-4c76-8450-3b2ed2b453b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Source Files">
+      <UniqueIdentifier>{5dfda1b4-30a9-42b9-9c2d-c3926c8a7008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Shader">
+      <UniqueIdentifier>{b0ef5a5a-1f82-469c-812b-59d79fe71b99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Elements">
+      <UniqueIdentifier>{d5c29545-d5e8-441d-9732-b2e841a17181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Elements\Header Files">
+      <UniqueIdentifier>{7d1fc896-c021-4686-bc70-561d958a7f59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Elements\Source Files">
+      <UniqueIdentifier>{ae12facd-5b0f-4586-8f2b-dd30b3440464}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GuiPrecompiled.cpp">
+      <Filter>Precompiled</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimaryView.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardInterface.cpp">
+      <Filter>Input\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseInterface.cpp">
+      <Filter>Input\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects.cpp">
+      <Filter>Effects\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlutCallbacks.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewEffect.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewStates.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalAOEffects.cpp">
+      <Filter>Effects\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HatchEffects.cpp">
+      <Filter>Effects\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureEffect.cpp">
+      <Filter>Effects\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiManager.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDome.cpp">
+      <Filter>Elements\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Elements\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\shader\viewer\shader.glsl">
+      <Filter>Effects\Shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
