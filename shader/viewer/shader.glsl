@@ -45,16 +45,22 @@ void main()
 {
   //textures
   vec4 normalTexel    = texture2D(normalMap,gl_TexCoord[0].st) * 2.0 - 1.0;
-  vec4 aoTexel        = texture2D(aoMap,gl_TexCoord[0].st);
+  vec4 aoTexel        = texture2D(aoMap,gl_TexCoord[0].st) * 0.5;
   vec4 terrainTexel   = texture2D(terrainTexture, gl_TexCoord[0].st);
-
+  
+  vec3 texNormal      = normalize( vec3(normalTexel) );
 
   vec3 eye       = normalize(-viewVector);
   vec3 reflected = normalize(reflect( -lightVector, normalVertex)); 
- 
-  vec4 IAmbient  = gl_LightSource[0].ambient * gl_FrontMaterial.ambient;
-  vec4 IDiffuse  = gl_LightSource[0].diffuse * max(dot(normalVertex, lightVector), 0.0) * gl_FrontMaterial.diffuse;
-  vec4 ISpecular = gl_LightSource[0].specular * pow(max(dot(reflected, eye), 0.0), gl_FrontMaterial.shininess) * gl_FrontMaterial.specular;
+  
+  float lambert  = max(dot(texNormal, lightVector), 0.0);
+  float specular = pow( clamp(dot(reflected, eye), 0.0, 1.0), gl_FrontMaterial.shininess );
+  
+  vec4 IAmbient  = (gl_LightSource[0].ambient * gl_FrontMaterial.ambient) + (gl_LightSource[0].ambient * aoTexel);
+  vec4 IDiffuse  = gl_LightSource[0].diffuse * lambert * gl_FrontMaterial.diffuse;
+  vec4 ISpecular = gl_LightSource[0].specular * specular * gl_FrontMaterial.specular;
   ISpecular = max(ISpecular, vec4(0.0,0.0,0.0,0.0));
-  gl_FragColor   = vec4((gl_FrontLightModelProduct.sceneColor + IAmbient + IDiffuse) + ISpecular);
+  //gl_FragColor   = vec4((gl_FrontLightModelProduct.sceneColor + IAmbient + IDiffuse) + ISpecular);
+  gl_FragColor   = vec4( ((gl_FrontLightModelProduct.sceneColor + IAmbient + IDiffuse) * vec3(terrainTexel)) + ISpecular); 
+  //gl_FragColor   = terrainTexel;
 }

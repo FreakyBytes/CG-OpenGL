@@ -17,6 +17,15 @@ namespace Application {
 	}
 
 
+	const GLfloat light_pos[] = { -400.0, -350.0, 1300.0, 0.0 };
+	const GLfloat light_direction[] = { 0.0, 0.0, -10.0 };
+	const GLfloat light_ambient[] = { 1.0, 1.0, 0.7, 0.1 };
+	const GLfloat light_diffuse[] = { 0.812, 0.812, 0.333, 0.6 };
+	const GLfloat light_specular[] = { 1.0, 1.0, 0.5, 0.3 };
+
+	const GLfloat terrain_ambient[] = { 0.2, 0.2, 0.2, 0.5 };
+	const GLfloat terrain_diffuse[] = { 0.55, 0.8, 0.55, 0.6 };
+	const GLfloat terrain_specular[] = { 0.02, 0.02, 0.02, 0.01 }; // Terrain has nearly no specular "reflection"
 
 	//start up window
 	bool COpenGLWindow::Initialize(int argc, char **argv)
@@ -31,13 +40,6 @@ namespace Application {
 		glEnable(GL_CULL_FACE);
 		glEnable(GL_NORMALIZE);	//normalize normals when scaling objects
 
-		// set light 0
-		GLfloat light_pos[] = { 1000.0, 200.0, 1000.0, 0.0 };
-		GLfloat light_direction[] = { 0.0, -1.0, 0.0 };
-		GLfloat light_ambient[] = { 0.8, 0.8, 0.0, 1.0 };
-		GLfloat light_diffuse[] = { 0.8, 0.8, 0.0, 1.0 };
-		GLfloat light_specular[] = { 0.2, 0.2, 0.0, 0.15 };
-		
 		// apply settings for light 0
 		glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
 		glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, light_direction);
@@ -131,7 +133,7 @@ namespace Application {
 		RenderSkyDome();
 
 		//render palme
-		//RenderPalm();
+		RenderPalm();
 
 		//render terrain
 		RenderTerrain(eye, lookAt, upVec);
@@ -167,8 +169,6 @@ namespace Application {
 		glPopMatrix();
 	}
 
-
-
 	void COpenGLWindow::RenderTerrain(glm::dvec3 const & eye, glm::dvec3 const & lookAt, glm::dvec3 const & upVec)
 	{
 		//save current matrix
@@ -179,7 +179,10 @@ namespace Application {
 		glPushAttrib(GL_LIGHTING_BIT);
 
 		//set material definition here 
-
+		glMaterialfv(GL_FRONT, GL_AMBIENT, terrain_ambient);
+		glMaterialfv(GL_FRONT, GL_DIFFUSE, terrain_diffuse);
+		glMaterialfv(GL_FRONT, GL_SPECULAR, terrain_specular);
+		
 		//render the palm
 		CPrimaryView::RenderTerrain(eye, lookAt, upVec);
 
@@ -201,6 +204,9 @@ namespace Application {
 			switch (key) {
 			case 'w':
 				GetViewStates().ToggleWireframeMode();
+				return true;
+			case 'k':
+
 				return true;
 			default:
 				return false;
