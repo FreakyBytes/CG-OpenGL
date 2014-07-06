@@ -189,7 +189,27 @@ namespace Application {
 		glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
 		glTranslatef(2.0f, 0.0f, 20.0f);
 
+		//render the palm
+		CPrimaryView::RenderPalm();
 
+		glPopMatrix();
+		glPushMatrix();
+
+		//transform palm
+		glScalef(80.1f, 80.1f, 60.1f);
+		glRotatef(85.7f, 1.0f, 0.0f, 0.1f);
+		glTranslatef(-0.6f, 0.0f, 20.0f);
+
+		//render the palm
+		CPrimaryView::RenderPalm();
+
+		glPopMatrix();
+		glPushMatrix();
+
+		//transform palm
+		glScalef(80.1f, 80.1f, 60.1f);
+		glRotatef(90.7f, 1.0f, 0.0f, 0.0f);
+		glTranslatef(-1.6f, -1.0f, 20.0f);
 
 		//render the palm
 		CPrimaryView::RenderPalm();
@@ -247,7 +267,7 @@ namespace Application {
 				}
 				else {
 					alternate_camera = true;
-					active_camera = 0;
+					active_camera = 1;
 					std::cout << "activated alt camera!" << std::endl;
 				}
 
