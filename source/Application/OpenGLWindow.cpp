@@ -4,6 +4,7 @@
 #include "Helper.h"
 #include "GLUtilities.h"
 #include "RasterTerrainModel.h"
+#include <string.h>
 
 using namespace Gui;
 
@@ -26,6 +27,9 @@ namespace Application {
 	const GLfloat terrain_ambient[] = { 0.2, 0.2, 0.2, 0.5 };
 	const GLfloat terrain_diffuse[] = { 0.55, 0.8, 0.55, 0.6 };
 	const GLfloat terrain_specular[] = { 0.02, 0.02, 0.02, 0.01 }; // Terrain has nearly no specular "reflection"
+
+	GLint active_camera = 0;
+	GLboolean alternate_camera = false;
 
 	//start up window
 	bool COpenGLWindow::Initialize(int argc, char **argv)
@@ -119,10 +123,37 @@ namespace Application {
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GetViewStates().GetWireframeMode() ? GL_LINE : GL_FILL);
 
-		//rotate eye around y-axis
-		const glm::dvec3 eye = GetFirstPersonCamera().GetEyePt();
-		const glm::dvec3 lookAt = GetFirstPersonCamera().GetLookAtPt();
+		glm::dvec3 eye;
+		glm::dvec3 lookAt;
 		const glm::dvec3 upVec = dvec3(0.0f, 0.0f, 1.0f);
+
+		//rotate eye around y-axis
+		if (alternate_camera == false) {
+			eye = GetFirstPersonCamera().GetEyePt();
+			lookAt = GetFirstPersonCamera().GetLookAtPt();
+		}
+		else
+		{
+			switch (active_camera)
+			{
+			case 1:
+				eye = dvec3(-3600.6f, 34.7f, 1038.9f);
+				lookAt = dvec3(-3599.6f, 34.5f, 1038.7f);
+				break;
+
+			case 2:
+				eye = dvec3(-3398.3, -352.0, 571.2);
+				lookAt = dvec3(-3397.5, -352.6, 571.2);
+				break;
+
+			case 3:
+				eye = dvec3(-949.5, 1261.4, 1681.6);
+				lookAt = dvec3(-948.5, 1261.85, 1681.3);
+				break;
+			default:
+				return;
+			}
+		}
 
 		//setup camera
 		gluLookAt(eye.x, eye.y, eye.z,          // eye position in world space
@@ -156,6 +187,8 @@ namespace Application {
 		//transform palm
 		glScalef(100.1f, 100.1f, 70.1f);
 		glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+		glTranslatef(2.0f, 0.0f, 20.0f);
+
 
 
 		//render the palm
@@ -200,20 +233,57 @@ namespace Application {
 	//param alt: alt pressed
 	bool COpenGLWindow::EvaluateActionKey(unsigned char key, bool ctrl, bool alt)
 	{
+		const glm::dvec3 eye = GetFirstPersonCamera().GetEyePt();
+		const glm::dvec3 lookAt = GetFirstPersonCamera().GetLookAtPt();
 		if (alt) {
 			switch (key) {
 			case 'w':
 				GetViewStates().ToggleWireframeMode();
 				return true;
 			case 'k':
+				if (alternate_camera == true) {
+					alternate_camera = false;
+					std::cout << "deactivated alt camera!" << std::endl;
+				}
+				else {
+					alternate_camera = true;
+					active_camera = 0;
+					std::cout << "activated alt camera!" << std::endl;
+				}
 
+				return true;
+			case 'r':
+				GetFirstPersonCamera().Reset();
+
+				return true;
+
+			case 'p':
+				
+
+				printf("eye: [%f, %f, %f]\n lookAt: [%f, %f, %f] \n", eye.x, eye.y, eye.z, lookAt.x, lookAt.y, lookAt.z);
 				return true;
 			default:
 				return false;
 			}
 		}
 		else {
-			return false;
+			switch (key)
+			{
+			case '1':
+				active_camera = 1;
+				std::cout << "set to alt camera 1" << std::endl;
+				return true;
+			case '2':
+				active_camera = 2;
+				std::cout << "set to alt camera 2" << std::endl;
+				return true;
+			case '3':
+				active_camera = 3;
+				std::cout << "set to alt camera 3" << std::endl;
+				return true;
+			default:
+				return false;;
+			}
 		}
 	}
 }

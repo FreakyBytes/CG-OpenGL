@@ -54,6 +54,7 @@ void main()
   vec3 reflected = normalize(reflect( -lightVector, normalVertex)); 
   
   float lambert  = max(dot(texNormal, lightVector), 0.0);
+  //lambert = 
   float specular = pow( clamp(dot(reflected, eye), 0.0, 1.0), gl_FrontMaterial.shininess );
   
   vec4 IAmbient  = (gl_LightSource[0].ambient * gl_FrontMaterial.ambient) + (gl_LightSource[0].ambient * aoTexel);
