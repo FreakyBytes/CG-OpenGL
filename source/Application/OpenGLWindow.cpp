@@ -18,14 +18,14 @@ namespace Application {
 	}
 
 
-	const GLfloat light_pos[] = { -400.0, -350.0, 1300.0, 0.0 };
+	const GLfloat light_pos[] = { -400.0, -350.0, 1300.0, 1.0 };
 	const GLfloat light_direction[] = { 0.0, 0.0, -10.0 };
 	const GLfloat light_ambient[] = { 1.0, 1.0, 0.7, 0.1 };
 	const GLfloat light_diffuse[] = { 0.812, 0.812, 0.333, 0.6 };
 	const GLfloat light_specular[] = { 1.0, 1.0, 0.5, 0.3 };
 
 	const GLfloat terrain_ambient[] = { 0.2, 0.2, 0.2, 0.5 };
-	const GLfloat terrain_diffuse[] = { 0.55, 0.8, 0.55, 0.6 };
+	const GLfloat terrain_diffuse[] = { 0.55, 0.65, 0.55, 0.6 };
 	const GLfloat terrain_specular[] = { 0.02, 0.02, 0.02, 0.01 }; // Terrain has nearly no specular "reflection"
 
 	GLint active_camera = 0;
@@ -137,8 +137,8 @@ namespace Application {
 			switch (active_camera)
 			{
 			case 1:
-				eye = dvec3(-3600.6f, 34.7f, 1038.9f);
-				lookAt = dvec3(-3599.6f, 34.5f, 1038.7f);
+				eye = dvec3(-2035.34f, 2752.94f, 1855.45f);
+				lookAt = dvec3(-2034.88f, 2752.08f, 1855.22f);
 				break;
 
 			case 2:
@@ -197,8 +197,8 @@ namespace Application {
 
 		//transform palm
 		glScalef(80.1f, 80.1f, 60.1f);
-		glRotatef(85.7f, 1.0f, 0.0f, 0.1f);
-		glTranslatef(-0.6f, 0.0f, 20.0f);
+		glRotatef(85.7f, 1.0f, 0.1f, 0.0f);
+		glTranslatef(2.0f, -2.0f, 21.0f);
 
 		//render the palm
 		CPrimaryView::RenderPalm();
@@ -207,9 +207,20 @@ namespace Application {
 		glPushMatrix();
 
 		//transform palm
-		glScalef(80.1f, 80.1f, 60.1f);
-		glRotatef(90.7f, 1.0f, 0.0f, 0.0f);
-		glTranslatef(-1.6f, -1.0f, 20.0f);
+		glScalef(70.1f, 70.1f, 80.1f);
+		glRotatef(83.7f, 1.0f, 0.05f, 0.0f);
+		glTranslatef(-1.6f, -3.0f, 22.0f);
+
+		//render the palm
+		CPrimaryView::RenderPalm();
+
+		glPopMatrix();
+		glPushMatrix();
+
+		//transform palm
+		glScalef(70.1f, 70.1f, 60.1f);
+		glRotatef(97.7f, 1.0f, 0.0f, 0.1f);
+		glTranslatef(2.5f, 1.7f, 20.0f);
 
 		//render the palm
 		CPrimaryView::RenderPalm();
@@ -267,7 +278,7 @@ namespace Application {
 				}
 				else {
 					alternate_camera = true;
-					active_camera = 1;
+					active_camera = 0;
 					std::cout << "activated alt camera!" << std::endl;
 				}
 

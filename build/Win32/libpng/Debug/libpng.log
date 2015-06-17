@@ -1,0 +1,44 @@
+﻿Der Buildvorgang wurde am 30.06.2014 22:42:52 gestartet.
+     1>Projekt "D:\git\cg-opengl\externals\libpng\libpng.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\git\cg-opengl\externals\zlib" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D ZLIB_WINAPI /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\git\cg-opengl\build\Win32\libpng\Debug\\" /Fd"D:\git\cg-opengl\build\Win32\libpng\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt png.c pngerror.c pngget.c pngmem.c pngpread.c pngread.c pngrio.c pngrtran.c pngrutil.c pngset.c pngtest.c pngtrans.c pngwio.c pngwrite.c pngwtran.c pngwutil.c
+         pngwutil.c
+         pngwtran.c
+         pngwrite.c
+         pngwio.c
+         pngtrans.c
+         pngtest.c
+         pngset.c
+         pngrutil.c
+         pngrtran.c
+         pngrio.c
+         pngread.c
+         pngpread.c
+         pngmem.c
+         pngget.c
+         pngerror.c
+         png.c
+         Code wird generiert...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\git\cg-opengl\bin\Win32\Debug\libpng.lib" zlib.lib /LIBPATH:"D:\git\cg-opengl\bin\Win32\Debug\\" /NOLOGO "D:\git\cg-opengl\build\Win32\libpng\Debug\png.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngerror.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngget.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngmem.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngpread.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngread.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngrio.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngrtran.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngrutil.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngset.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngtest.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngtrans.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngwio.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngwrite.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngwtran.obj"
+         "D:\git\cg-opengl\build\Win32\libpng\Debug\pngwutil.obj"
+         libpng.vcxproj -> D:\git\cg-opengl\bin\Win32\Debug\libpng.lib
+     1>Die Erstellung des Projekts "D:\git\cg-opengl\externals\libpng\libpng.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:09.04

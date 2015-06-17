@@ -1,0 +1,68 @@
+﻿Der Buildvorgang wurde am 30.06.2014 22:42:45 gestartet.
+     1>Projekt "D:\git\cg-opengl\externals\freeglut\freeglut.vcxproj" auf Knoten "3", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\git\cg-opengl\externals\freeglut\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D FREEGLUT_STATIC /D FREEGLUT_LIB_PRAGMAS=0 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\git\cg-opengl\build\Win32\freeglut\Debug\\" /Fd"D:\git\cg-opengl\build\Win32\freeglut\Debug\vc120.pdb" /Gd /TC /wd4996 /analyze- /errorReport:prompt src\freeglut_callbacks.c src\freeglut_cursor.c src\freeglut_display.c src\freeglut_ext.c src\freeglut_font.c src\freeglut_font_data.c src\freeglut_gamemode.c src\freeglut_geometry.c src\freeglut_glutfont_definitions.c src\freeglut_init.c src\freeglut_input_devices.c src\freeglut_joystick.c src\freeglut_main.c src\freeglut_menu.c src\freeglut_misc.c src\freeglut_overlay.c src\freeglut_spaceball.c src\freeglut_state.c src\freeglut_stroke_mono_roman.c src\freeglut_stroke_roman.c src\freeglut_structure.c src\freeglut_teapot.c src\freeglut_videoresize.c src\freeglut_window.c src\freeglut_xinput.c
+         freeglut_xinput.c
+         freeglut_window.c
+         fgSetupPixelFormat(): there is still some work to do here!
+         freeglut_videoresize.c
+         freeglut_teapot.c
+         freeglut_structure.c
+         freeglut_stroke_roman.c
+         freeglut_stroke_mono_roman.c
+         freeglut_state.c
+         freeglut_spaceball.c
+         freeglut_overlay.c
+         freeglut_misc.c
+         freeglut_menu.c
+         freeglut_main.c
+         freeglut_joystick.c
+         freeglut_input_devices.c
+         freeglut_init.c
+         freeglut_glutfont_definitions.c
+         freeglut_geometry.c
+         freeglut_gamemode.c
+         freeglut_font_data.c
+         Code wird generiert...
+         Kompilieren...
+         freeglut_font.c
+         freeglut_ext.c
+         freeglut_display.c
+         freeglut_cursor.c
+         freeglut_callbacks.c
+         Code wird generiert...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut.res" freeglut.rc 
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\git\cg-opengl\bin\Win32\Debug\freeglut.lib" /NOLOGO /MACHINE:X86 "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut.res"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_callbacks.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_cursor.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_display.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_ext.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_font.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_font_data.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_gamemode.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_geometry.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_glutfont_definitions.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_init.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_input_devices.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_joystick.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_main.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_menu.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_misc.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_overlay.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_spaceball.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_state.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_stroke_mono_roman.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_stroke_roman.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_structure.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_teapot.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_videoresize.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_window.obj"
+         "D:\git\cg-opengl\build\Win32\freeglut\Debug\freeglut_xinput.obj"
+         freeglut.vcxproj -> D:\git\cg-opengl\bin\Win32\Debug\freeglut.lib
+     1>Die Erstellung des Projekts "D:\git\cg-opengl\externals\freeglut\freeglut.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:07.37

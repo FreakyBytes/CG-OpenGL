@@ -1,0 +1,27 @@
+﻿Der Buildvorgang wurde am 09.07.2014 18:38:09 gestartet.
+     1>Projekt "D:\git\cg-opengl\source\Application\Application.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\git\cg-opengl\source\GLUtils" /I"D:\git\cg-opengl\externals\glm" /I"D:\git\cg-opengl\externals\freeglut\include" /I"D:\git\cg-opengl\externals\glew\include" /I"D:\git\cg-opengl\source\Gui" /I"D:\git\cg-opengl\source\Terrain" /I"D:\git\cg-opengl\source\Data" /I"D:\git\cg-opengl\source\DataRendering" /Zi /nologo /W3 /WX- /Od /D GLEW_STATIC /D FREEGLUT_STATIC /D FREEGLUT_LIB_PRAGMAS=0 /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\git\cg-opengl\build\x64\Application\Debug\\" /Fd"D:\git\cg-opengl\build\x64\Application\Debug\vc120.pdb" /Gd /TP /errorReport:prompt OpenGLWindow.cpp
+         OpenGLWindow.cpp
+     1>OpenGLWindow.cpp(23): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(24): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(25): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(27): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(28): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(29): warning C4305: 'Initialisierung': Verkürzung von 'double' in 'const GLfloat'
+     1>OpenGLWindow.cpp(275): warning C4805: '==': unsichere Kombination von Typ 'GLboolean' mit Typ 'bool' in einer Operation
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\git\cg-opengl\bin\x64\Debug\Application.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\git\cg-opengl\bin\x64\Debug\\" winmm.lib opengl32.lib glu32.lib glew.lib kernel32.lib user32.lib freeglut.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\git\cg-opengl\bin\x64\Debug\Application.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\git\cg-opengl\bin\x64\Debug\Application.lib" /MACHINE:X64 "D:\git\cg-opengl\build\x64\Application\Debug\Application.obj"
+         "D:\git\cg-opengl\build\x64\Application\Debug\Main.obj"
+         "D:\git\cg-opengl\build\x64\Application\Debug\OpenGLWindow.obj"
+         "D:\git\cg-opengl\bin\x64\Debug\freeglut.lib"
+         "D:\git\cg-opengl\bin\x64\Debug\glew.lib"
+         "D:\git\cg-opengl\bin\x64\Debug\GLUtils.lib"
+         "D:\git\cg-opengl\bin\x64\Debug\Gui.lib"
+         "D:\git\cg-opengl\bin\x64\Debug\Terrain.lib"
+         Application.vcxproj -> D:\git\cg-opengl\bin\x64\Debug\Application.exe
+     1>Die Erstellung des Projekts "D:\git\cg-opengl\source\Application\Application.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:06.21
